@@ -50,6 +50,20 @@ nav ul li a:hover, nav ul li a.active {
     border-bottom: 2px solid #3498db;
 }
 
+/* Espace au-dessus des images dans les sections sur PC */
+.section-media {
+    margin-top: 50px; /* Décale l'image vers le bas pour l'aligner harmonieusement sous le niveau du titre */
+}
+
+/* S'assurer que les images restent bien cadrées */
+.section-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
 /* Bannière d'accueil ajustée : plus claire et calée en bas */
 .hero {
     /* 1. Dégradé beaucoup plus clair : rgba(0,0,0,0.2) et 0.4 au lieu de 0.5/0.7 */
@@ -174,10 +188,9 @@ a:hover {
 
 @media (max-width: 768px) {
 
-    /* Décalage sur mobile pour l'ancre invisible */
-    .ancre-menu {
-        height: 160px;      /* Adaptez cette valeur (ex: 160px à 200px) selon la hauteur de votre bandeau noir sur téléphone */
-        margin-top: -180px;
+    /* Sur mobile, l'image est sous le texte, donc pas besoin de la descendre */
+    .section-media {
+        margin-top: 15px;
     }
 
     /* Restaurez des styles propres et normaux pour h2 et section */
