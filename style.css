@@ -171,6 +171,11 @@ a:hover {
 
 @media (max-width: 768px) {
 
+    /* Décalage plus grand sur mobile car le bandeau noir est plus haut */
+    .content-section, section {
+        scroll-margin-top: 150px; 
+    }
+    
     /* 1. Ajustement de l'en-tête et du menu */
     header {
         flex-direction: column; /* Le logo passe au-dessus du menu */
