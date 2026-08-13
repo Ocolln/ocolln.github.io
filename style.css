@@ -165,16 +165,14 @@ a:hover {
 
 @media (max-width: 768px) {
 
-    /* Appliquer le décalage d'ancrage directement sur les titres de section */
+    /* Alternative infaillible sur mobile : créer un espace invisible au-dessus des titres */
     h2 {
-        scroll-margin-top: 180px; /* Décale spécifiquement le titre sous le bandeau */
+        padding-top: 140px;    /* Repousse le texte du titre vers le bas */
+        margin-top: -140px;    /* Compense pour ne pas décaler le reste du design */
+        display: block;
     }
 
-    /* Vider la propriété sur le conteneur parent pour éviter les conflits de calcul */
-    .content-section, section {
-        scroll-margin-top: 0;
-    }
-
+}
     /* Grille texte/image : passe en 1 seule colonne sur mobile */
     .section-grid {
         grid-template-columns: 1fr;
