@@ -117,7 +117,7 @@ nav ul li a.active {
     background-size: cover;
     color: white;
     text-align: center;
-    padding-top: 280px;   /* Augmenté pour descendre le titre sous les yeux des musiciens */
+    padding-top: 320px;   /* Augmenté pour descendre le titre sous les yeux des musiciens */
     padding-bottom: 60px; /* Conserve un bel espace sous le sous-titre */
     min-height: 350px;
 }
