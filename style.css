@@ -167,7 +167,7 @@ a:hover {
 
     /* Décalage plus grand sur mobile car le bandeau noir est plus haut */
     .content-section, section {
-        scroll-margin-top: 400px; 
+        scroll-margin-top: 500px; 
     }
 /* Grille texte/image : passe en 1 seule colonne sur mobile */
     .section-grid {
