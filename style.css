@@ -50,12 +50,13 @@ nav ul li a:hover, nav ul li a.active {
     border-bottom: 2px solid #3498db;
 }
 
-/* Bannière d'accueil */
+/* Bannière d'accueil avec votre image ork.jpg */
 .hero {
-    background: linear-gradient(rgba(26, 37, 47, 0.8), rgba(26, 37, 47, 0.8)), url('https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=1200') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('images/ork.jpg') no-repeat center center/cover;
     color: white;
     text-align: center;
-    padding: 100px 20px;
+    padding: 120px 20px; /* J'ai légèrement augmenté l'espace pour mieux voir la photo */
+    background-attachment: fixed; /* Optionnel : effet de parallaxe sympa au défilement */
 }
 
 .hero h1 {
