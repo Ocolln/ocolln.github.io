@@ -370,3 +370,13 @@ img {
         gap: 0;
     }
 }
+
+/* Décalage automatique pour éviter que le menu fixe ne masque les titres */
+.content-section, section {
+    scroll-margin-top: 90px; /* Décale le point d'arrêt de 90 pixels vers le bas */
+}
+
+/* Défilement doux lors du clic dans le menu */
+html {
+    scroll-behavior: smooth;
+}
