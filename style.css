@@ -113,12 +113,13 @@ nav ul li a.active {
 
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('images/ork.jpg') no-repeat;
-    background-position: center center;
+    background-position: center bottom; /* Calé en bas pour voir la photo */
     background-size: cover;
     color: white;
     text-align: center;
-    padding: 120px 20px;
-    min-height: 300px;
+    padding-top: 220px;   /* Augmenté pour descendre le titre sous les yeux des musiciens */
+    padding-bottom: 60px; /* Conserve un bel espace sous le sous-titre */
+    min-height: 350px;
 }
 
 .hero h1 {
@@ -326,8 +327,9 @@ footer {
         padding: 4px 6px;
     }
 
-    .hero {
-        padding: 70px 15px;
+   .hero {
+        padding-top: 140px;
+        padding-bottom: 40px;
     }
 
     .hero h1 {
