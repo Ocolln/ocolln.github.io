@@ -116,6 +116,27 @@ a {
     text-decoration: none;
 }
 
+/* Style spécifique à la section Cheffe d'orchestre */
+.cheffe-container h3 {
+    color: #1a252f;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.card-cours {
+    background-color: #f4f7f6;
+    border-left: 4px solid #3498db;
+    padding: 20px;
+    border-radius: 4px;
+    margin-top: 25px;
+}
+
+.card-cours h4 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 18px;
+}
+
 a:hover {
     text-decoration: underline;
 }
