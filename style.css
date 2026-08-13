@@ -112,13 +112,13 @@ nav ul li a.active {
    ========================================================= */
 
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('images/ork.jpg') no-repeat;
-    background-position: center bottom; /* Calé en bas pour voir la photo */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/ork.jpg') no-repeat;
+    background-position: center top; /* Cadrage calé vers le haut */
     background-size: cover;
     color: white;
     text-align: center;
-    padding-top: 380px;   /* Augmenté pour descendre le titre sous les yeux des musiciens */
-    padding-bottom: 60px; /* Conserve un bel espace sous le sous-titre */
+    padding-top: 40px;    /* Réduit au minimum pour coller le titre en haut */
+    padding-bottom: 240px; /* Espace important en bas pour laisser apparaître les musiciens */
     min-height: 350px;
 }
 
@@ -328,8 +328,8 @@ footer {
     }
 
    .hero {
-        padding-top: 180px;
-        padding-bottom: 30px;
+        padding-top: 20px;
+        padding-bottom: 160px;
     }
 
     .hero h1 {
