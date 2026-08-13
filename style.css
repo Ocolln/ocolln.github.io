@@ -237,3 +237,52 @@ a:hover {
         gap: 10px;
     }
 }
+
+/* =========================================================
+   GALERIE ET GESTION HARMONIEUSE DES IMAGES
+   ========================================================= */
+
+/* Sécurité globale : aucune image ne peut sortir de son conteneur */
+img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+/* Grille de la galerie photo */
+.galerie {
+    display: grid;
+    /* Crée une grille automatique avec des vignettes de minimum 220px */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Style des cartes / vignettes de la galerie */
+.galerie img {
+    width: 100%;
+    height: 180px; /* Force toutes les photos de la galerie à la même hauteur */
+    object-fit: cover; /* Recadre intelligemment l'image sans la déformer/étirer */
+    object-position: center; /* Centre le recadrage */
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Effet de survol sympathique sur ordinateur */
+.galerie img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Adaptation pour très petits écrans (mobiles) */
+@media (max-width: 480px) {
+    .galerie {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+    }
+
+    .galerie img {
+        height: 130px; /* Hauteur légèrement réduite sur smartphone */
+    }
+}
