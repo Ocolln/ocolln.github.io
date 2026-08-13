@@ -50,13 +50,25 @@ nav ul li a:hover, nav ul li a.active {
     border-bottom: 2px solid #3498db;
 }
 
-/* Bannière d'accueil avec votre image ork.jpg */
+/* Bannière d'accueil ajustée : plus claire et calée en bas */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('images/ork.jpg') no-repeat center center/cover;
+    /* 1. Dégradé beaucoup plus clair : rgba(0,0,0,0.2) et 0.4 au lieu de 0.5/0.7 */
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('images/ork.jpg') no-repeat;
+    
+    /* 2. Positionner l'image pour qu'on voie le bas : center bottom (centre horizontal, bas vertical) */
+    background-position: center bottom;
+    
+    /* 3. S'assurer que l'image couvre tout l'espace sans être déformée */
+    background-size: cover;
+    
     color: white;
     text-align: center;
-    padding: 120px 20px; /* J'ai légèrement augmenté l'espace pour mieux voir la photo */
-    background-attachment: fixed; /* Optionnel : effet de parallaxe sympa au défilement */
+    
+    /* 4. Augmenter légèrement le padding vertical pour agrandir le cadre et voir plus de photo */
+    padding: 150px 20px; 
+    
+    /* Optionnel : Supprimez 'background-attachment: fixed' si le bas n'est pas assez visible */
+    /* background-attachment: fixed; */
 }
 
 .hero h1 {
