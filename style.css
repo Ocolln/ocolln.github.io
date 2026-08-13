@@ -64,20 +64,28 @@ main {
     pointer-events: none;
 }
 
-/* Espace au-dessus des images dans les sections sur PC */
-.section-media {
-    margin-top: 0; /* Remise à l'état d'origine */
+/* Alignement de la grille sur PC */
+.section-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    align-items: start; /* Empêche l'image de s'étirer verticalement */
 }
 
-/* S'assurer que les images restent bien cadrées */
+/* Alignement vertical de l'image par rapport au titre sur PC */
+.section-media {
+    margin-top: 40px; /* Descend la photo pour que son sommet arrive sous le titre h2 */
+}
+
+/* S'assurer que la photo ne dépasse pas en hauteur */
 .section-img {
     width: 100%;
     height: auto;
+    max-height: 400px; /* Limite la hauteur sur PC si l'image est très grande */
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    object-fit: cover;
 }
-
 /* Bannière d'accueil ajustée : plus claire et calée en bas */
 .hero {
     /* 1. Dégradé beaucoup plus clair : rgba(0,0,0,0.2) et 0.4 au lieu de 0.5/0.7 */
