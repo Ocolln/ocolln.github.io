@@ -72,21 +72,16 @@ main {
     align-items: start; /* Empêche l'image de s'étirer verticalement */
 }
 
-/* Conteneur de l'image dans les sections */
 .section-media {
     margin-top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    width: 100%;
 }
 
-/* Images des sections (Portrait, photos d'orchestre, etc.) */
+/* Style d'origine des images de section (photos d'orchestre, cheffe, etc.) */
 .section-img {
     width: 100%;
-    height: auto;          /* Laisse l'image calculer sa vraie hauteur naturelle */
-    max-width: 100%;       /* Empêche de dépasser du cadre */
-    max-height: none;      /* Supprime toute restriction de hauteur qui coupait l'image */
-    object-fit: contain;   /* Affiche l'image EN TIÈRE sans aucun recadrage */
+    height: auto;           /* L'image conserve ses proportions naturelles exactes */
+    display: block;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
@@ -206,15 +201,15 @@ a:hover {
 
 @media (max-width: 768px) {
 
-    /* Sur mobile, l'image s'adapte naturellement sous le texte */
     .section-img {
         width: 100%;
         height: auto;
-        max-height: none;
     }
 
-    /* ... conservez vos autres styles mobiles (menu, marges, etc.) ... */
+    /* ... conservez vos autres règles mobiles pour le menu, les ancres, etc. ... */
 }
+
+
 
     .section-img {
         max-height: 250px; /* Hauteur adaptée pour téléphone */
