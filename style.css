@@ -72,39 +72,35 @@ main {
     align-items: start; /* Empêche l'image de s'étirer verticalement */
 }
 
-/* Alignement vertical de l'image par rapport au titre sur PC */
+/* Conteneur de l'image dans les sections */
 .section-media {
-    margin-top: 40px; /* Descend la photo pour que son sommet arrive sous le titre h2 */
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-/* S'assurer que la photo ne dépasse pas en hauteur */
+/* Images des sections (Portrait, photos d'orchestre, etc.) */
 .section-img {
     width: 100%;
-    height: auto;
-    max-height: 400px; /* Limite la hauteur sur PC si l'image est très grande */
-    object-fit: cover;
+    height: auto;          /* Laisse l'image calculer sa vraie hauteur naturelle */
+    max-width: 100%;       /* Empêche de dépasser du cadre */
+    max-height: none;      /* Supprime toute restriction de hauteur qui coupait l'image */
+    object-fit: contain;   /* Affiche l'image EN TIÈRE sans aucun recadrage */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
-/* Bannière d'accueil ajustée : plus claire et calée en bas */
+
+/* Bannière d'accueil */
 .hero {
-    /* 1. Dégradé beaucoup plus clair : rgba(0,0,0,0.2) et 0.4 au lieu de 0.5/0.7 */
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url('images/ork.jpg') no-repeat;
-    
-    /* 2. Positionner l'image pour qu'on voie le bas : center bottom (centre horizontal, bas vertical) */
-    background-position: center bottom;
-    
-    /* 3. S'assurer que l'image couvre tout l'espace sans être déformée */
-    background-size: cover;
-    
+    /* Fond avec dégradé sombre léger pour que le texte blanc reste lisible */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('images/ork.jpg') no-repeat;
+    background-position: center center; /* Centre la photo */
+    background-size: cover;            /* Remplit l'espace sans déformer */
     color: white;
     text-align: center;
-    
-    /* 4. Augmenter légèrement le padding vertical pour agrandir le cadre et voir plus de photo */
-    padding: 150px 20px; 
-    
-    /* Optionnel : Supprimez 'background-attachment: fixed' si le bas n'est pas assez visible */
-    /* background-attachment: fixed; */
+    padding: 120px 20px;               /* Donne de la hauteur à la bannière */
+    min-height: 300px;                 /* Hauteur minimale garantie */
 }
 
 .hero h1 {
@@ -210,10 +206,15 @@ a:hover {
 
 @media (max-width: 768px) {
 
-    /* Sur mobile, l'image est sous le texte : pas de marge supérieure */
-    .section-media {
-        margin-top: 0;
+    /* Sur mobile, l'image s'adapte naturellement sous le texte */
+    .section-img {
+        width: 100%;
+        height: auto;
+        max-height: none;
     }
+
+    /* ... conservez vos autres styles mobiles (menu, marges, etc.) ... */
+}
 
     .section-img {
         max-height: 250px; /* Hauteur adaptée pour téléphone */
