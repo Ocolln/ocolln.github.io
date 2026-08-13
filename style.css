@@ -158,12 +158,6 @@ a:hover {
     object-fit: cover;
 }
 
-/* Adaptation automatique pour mobiles et tablettes */
-@media (max-width: 768px) {
-    .section-grid {
-        grid-template-columns: 1fr; /* Sur écran mobile, l'image passe sous le texte */
-    }
-}
 
 /* =========================================================
    OPTIMISATIONS POUR SMARTPHONES ET TABLETTES (Mobile)
