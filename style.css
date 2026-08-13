@@ -95,8 +95,8 @@ h2 {
 /* Style des ancres invisibles pour le menu (Version PC) */
 .ancre-menu {
     display: block;
-    height: 250px;       /* Augmenté pour dégager complètement le haut des photos et des titres sur PC */
-    margin-top: -250px;  /* Compensation exacte */
+    height: 500px;       /* Augmenté pour dégager complètement le haut des photos et des titres sur PC */
+    margin-top: -500px;  /* Compensation exacte */
     visibility: hidden;
     pointer-events: none;
 }
