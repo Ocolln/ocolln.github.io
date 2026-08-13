@@ -312,3 +312,61 @@ img {
         margin-top: 20px; /* Espace au-dessus une fois qu'il passe sous le texte */
     }
 }
+/* =========================================================
+   STYLE SECTION LES MUSICIENS
+   ========================================================= */
+
+.sous-titre-musiciens {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+}
+
+/* Grille 2 colonnes pour les musiciens */
+.musiciens-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes de taille égale */
+    gap: 30px;
+    align-items: start;
+}
+
+/* Style de chaque groupe / pupitre */
+.pupitre {
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 4px solid #1a252f;
+}
+
+.pupitre h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #1a252f;
+    font-size: 18px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 5px;
+}
+
+.pupitre ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.pupitre ul li {
+    padding: 3px 0;
+    font-size: 15px;
+    color: #333;
+}
+
+.pupitre.comite-presidence {
+    border-left-color: #3498db;
+}
+
+/* Adaptation automatique pour smartphone */
+@media (max-width: 768px) {
+    .musiciens-grid {
+        grid-template-columns: 1fr; /* Repasse sur 1 colonne sur mobile */
+        gap: 0;
+    }
+}
