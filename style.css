@@ -176,8 +176,8 @@ a:hover {
 
     /* Décalage sur mobile pour l'ancre invisible */
     .ancre-menu {
-        height: 160px;      /* Adaptez cette valeur (ex: 160px à 200px) selon la hauteur de votre bandeau noir sur téléphone */
-        margin-top: -160px;
+        height: 140px;      /* Adaptez cette valeur (ex: 160px à 200px) selon la hauteur de votre bandeau noir sur téléphone */
+        margin-top: -140px;
     }
 
     /* Restaurez des styles propres et normaux pour h2 et section */
