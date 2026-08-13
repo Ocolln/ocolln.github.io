@@ -210,10 +210,17 @@ a:hover {
 
 @media (max-width: 768px) {
 
-    /* Sur mobile, on ajuste la marge en haut du contenu selon la hauteur du menu mobile */
-    main {
-        padding-top: 140px;
+    /* Sur mobile, l'image est sous le texte : pas de marge supérieure */
+    .section-media {
+        margin-top: 0;
     }
+
+    .section-img {
+        max-height: 250px; /* Hauteur adaptée pour téléphone */
+    }
+
+    /* ... gardez votre reste de code mobile intact ... */
+}
 
     /* Ancre invisible adaptée pour smartphone */
     .ancre-menu {
