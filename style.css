@@ -1,4 +1,11 @@
-/* Styles généraux */
+/* =========================================================
+   1. STYLES GÉNÉRAUX & STRUCTURE
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
@@ -8,7 +15,55 @@ body {
     background-color: #f8f9fa;
 }
 
-/* En-tête et Navigation */
+main {
+    padding-top: 80px; /* Espace réservé sous le bandeau fixe */
+}
+
+/* Sécurité globale des images */
+img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h2 {
+    color: #1a252f;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+.content-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Ancre invisible pour décalage sous le menu sur PC */
+.ancre-menu {
+    display: block;
+    height: 115px;
+    margin-top: -115px;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   2. EN-TÊTE & NAVIGATION
+   ========================================================= */
+
 header {
     background-color: #1a252f;
     color: #fff;
@@ -45,57 +100,25 @@ nav ul li a {
     transition: color 0.3s;
 }
 
-nav ul li a:hover, nav ul li a.active {
+nav ul li a:hover, 
+nav ul li a.active {
     color: #fff;
     border-bottom: 2px solid #3498db;
 }
 
-/* 1. Décalage du contenu principal sous le bandeau noir */
-main {
-    padding-top: 80px; /* Crée un espace blanc sous le bandeau pour que les cartes ne glissent pas dessous */
-}
 
-/* 2. Réglage précis de l'ancre invisible pour PC */
-.ancre-menu {
-    display: block;
-    height: 80px;        /* Hauteur exacte correspondant au bandeau */
-    margin-top: -80px;   /* Marge négative pour compenser l'espace */
-    visibility: hidden;
-    pointer-events: none;
-}
+/* =========================================================
+   3. BANNIÈRE HERO & CARTES
+   ========================================================= */
 
-/* Alignement de la grille sur PC */
-.section-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 25px;
-    align-items: start; /* Empêche l'image de s'étirer verticalement */
-}
-
-.section-media {
-    margin-top: 0;
-    width: 100%;
-}
-
-/* Style d'origine des images de section (photos d'orchestre, cheffe, etc.) */
-.section-img {
-    width: 100%;
-    height: auto;           /* L'image conserve ses proportions naturelles exactes */
-    display: block;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-/* Bannière d'accueil */
 .hero {
-    /* Fond avec dégradé sombre léger pour que le texte blanc reste lisible */
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('images/ork.jpg') no-repeat;
-    background-position: center center; /* Centre la photo */
-    background-size: cover;            /* Remplit l'espace sans déformer */
+    background-position: center center;
+    background-size: cover;
     color: white;
     text-align: center;
-    padding: 120px 20px;               /* Donne de la hauteur à la bannière */
-    min-height: 300px;                 /* Hauteur minimale garantie */
+    padding: 120px 20px;
+    min-height: 300px;
 }
 
 .hero h1 {
@@ -103,32 +126,6 @@ main {
     margin-bottom: 10px;
 }
 
-/* Sections de contenu */
-.content-section {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-
-h2 {
-    color: #1a252f;
-    border-bottom: 2px solid #ecf0f1;
-    padding-bottom: 10px;
-}
-
-/* Style des ancres invisibles pour le menu (Version PC) */
-.ancre-menu {
-    display: block;
-    height: 115px;       /* Augmenté pour dégager complètement le haut des photos et des titres sur PC */
-    margin-top: -115px;  /* Compensation exacte */
-    visibility: hidden;
-    pointer-events: none;
-}
-
-/* Carte Save the date */
 .card {
     background-color: #e8f4fd;
     border-left: 5px solid #3498db;
@@ -137,22 +134,32 @@ h2 {
     margin-top: 20px;
 }
 
-/* Pied de page */
-footer {
-    background-color: #1a252f;
-    color: #7f8c8d;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
-    font-size: 14px;
+
+/* =========================================================
+   4. LAYOUT DES SECTIONS (TEXTE + IMAGE)
+   ========================================================= */
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    align-items: start;
 }
 
-a {
-    color: #3498db;
-    text-decoration: none;
+.section-media {
+    margin-top: 0;
+    width: 100%;
 }
 
-/* Style spécifique à la section Cheffe d'orchestre */
+.section-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Section Cheffe d'orchestre */
 .cheffe-container h3 {
     color: #1a252f;
     font-size: 22px;
@@ -173,222 +180,50 @@ a {
     font-size: 18px;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* Layout en grille pour Texte + Image côte à côte */
-.section-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr; /* 2 tiers pour le texte, 1 tiers pour l'image */
-    gap: 25px;
-    align-items: start;
-}
-
-/* Image spécifique aux sections */
-.section-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    object-fit: cover;
-}
-
 
 /* =========================================================
-   OPTIMISATIONS POUR SMARTPHONES ET TABLETTES (Mobile)
+   5. GALERIE PHOTOS & LOGO
    ========================================================= */
 
-@media (max-width: 768px) {
-
-    .section-img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* ... conservez vos autres règles mobiles pour le menu, les ancres, etc. ... */
-}
-
-
-
-    .section-img {
-        max-height: 250px; /* Hauteur adaptée pour téléphone */
-    }
-
-    /* ... gardez votre reste de code mobile intact ... */
-}
-
-    /* Ancre invisible adaptée pour smartphone */
-    .ancre-menu {
-        height: 140px;
-        margin-top: -140px;
-    }
-
-    .section-media {
-        margin-top: 0;
-    }
-}
-
-    /* Restaurez des styles propres et normaux pour h2 et section */
-    h2 {
-        padding-top: 0;
-        margin-top: 0;
-        scroll-margin-top: 0;
-    }
-
-    .content-section, section {
-        scroll-margin-top: 0;
-    }
-
-}
-    /* Grille texte/image : passe en 1 seule colonne sur mobile */
-    .section-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    /* 1. Ajustement de l'en-tête et du menu */
-    header {
-        flex-direction: column; /* Le logo passe au-dessus du menu */
-        padding: 15px 10px;
-        text-align: center;
-    }
-
-    header .logo {
-        margin-bottom: 10px;
-    }
-
-    nav ul {
-        flex-wrap: wrap; /* Permet aux liens du menu de passer à la ligne sur mobile */
-        justify-content: center;
-        gap: 8px 12px;
-    }
-
-    nav ul li {
-        margin-left: 0; /* Annule la marge ordinateur */
-    }
-
-    nav ul li a {
-        font-size: 14px; /* Texte du menu légèrement plus petit pour tenir facilement */
-        padding: 4px 6px;
-    }
-
-    /* 2. Ajustement de la bannière Hero */
-    .hero {
-        padding: 70px 15px; /* Moins de hauteur vide pour voir la suite tout de suite */
-    }
-
-    .hero h1 {
-        font-size: 26px; /* Titre principal adapté aux petits écrans */
-    }
-
-    .hero p {
-        font-size: 15px;
-    }
-
-    /* 3. Marges et espaces des sections de contenu */
-    .content-section {
-        margin: 20px 10px; /* Moins d'espace vide autour des blocs */
-        padding: 15px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    /* 4. Gestion du texte et des images */
-    .section-grid {
-        grid-template-columns: 1fr; /* Une seule colonne : le texte, puis l'image en-dessous */
-        gap: 15px;
-    }
-
-    .section-img {
-        max-height: 250px; /* Limite la hauteur des images pour ne pas masquer tout l'écran */
-        object-fit: cover;
-    }
-
-    /* 5. Galerie photos */
-    .galerie {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Deux photos par ligne au lieu d'une seule grande */
-        gap: 10px;
-    }
-}
-
-/* =========================================================
-   GALERIE ET GESTION HARMONIEUSE DES IMAGES
-   ========================================================= */
-
-/* Sécurité globale : aucune image ne peut sortir de son conteneur */
-img {
-    max-width: 100%;
-    height: auto;
-    box-sizing: border-box;
-}
-
-/* Grille de la galerie photo */
 .galerie {
     display: grid;
-    /* Crée une grille automatique avec des vignettes de minimum 220px */
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 15px;
     margin-top: 20px;
 }
 
-/* Style des cartes / vignettes de la galerie */
 .galerie img {
     width: 100%;
-    height: 180px; /* Force toutes les photos de la galerie à la même hauteur */
-    object-fit: cover; /* Recadre intelligemment l'image sans la déformer/étirer */
-    object-position: center; /* Centre le recadrage */
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Effet de survol sympathique sur ordinateur */
 .galerie img:hover {
     transform: scale(1.03);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Adaptation pour très petits écrans (mobiles) */
-@media (max-width: 480px) {
-    .galerie {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-        gap: 10px;
-    }
-
-    .galerie img {
-        height: 130px; /* Hauteur légèrement réduite sur smartphone */
-    }
-}
-
-/* Style pour le logo circulaire (sans cadre, sans fond, entier) */
+/* Logo circulaire */
 .logo-img {
     width: 100%;
-    max-width: 250px; /* Limite la taille maximale pour qu'il ne soit pas géant sur PC */
-    height: auto;     /* Conserve les proportions parfaites du cercle */
+    max-width: 250px;
+    height: auto;
     display: block;
-    margin: 0 auto;   /* Centre le logo dans son espace */
-    
-    /* Annule tout cadre, fond ou ombre */
+    margin: 0 auto;
     border: none !important;
     background: transparent !important;
     box-shadow: none !important;
     border-radius: 0 !important;
-    
-    /* Assure que l'image est entière sans être découpée */
     object-fit: contain !important;
 }
 
-/* Ajustement pour smartphone */
-@media (max-width: 768px) {
-    .logo-img {
-        max-width: 180px; /* Légèrement plus petit sur mobile pour laisser de la place au texte */
-        margin-top: 20px; /* Espace au-dessus une fois qu'il passe sous le texte */
-    }
-}
+
 /* =========================================================
-   STYLE SECTION LES MUSICIENS
+   6. SECTION LES MUSICIENS
    ========================================================= */
 
 .sous-titre-musiciens {
@@ -396,15 +231,13 @@ img {
     margin-bottom: 25px;
 }
 
-/* Grille 2 colonnes pour les musiciens */
 .musiciens-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Deux colonnes de taille égale */
+    grid-template-columns: 1fr 1fr;
     gap: 30px;
     align-items: start;
 }
 
-/* Style de chaque groupe / pupitre */
 .pupitre {
     background-color: #f8f9fa;
     padding: 15px 20px;
@@ -438,20 +271,122 @@ img {
     border-left-color: #3498db;
 }
 
-/* Adaptation automatique pour smartphone */
+
+/* =========================================================
+   7. PIED DE PAGE
+   ========================================================= */
+
+footer {
+    background-color: #1a252f;
+    color: #7f8c8d;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   8. OPTIMISATIONS MOBILES ET TABLETTES (<= 768px)
+   ========================================================= */
+
 @media (max-width: 768px) {
+
+    main {
+        padding-top: 140px;
+    }
+
+    .ancre-menu {
+        height: 140px;
+        margin-top: -140px;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 12px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 4px 6px;
+    }
+
+    .hero {
+        padding: 70px 15px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .content-section {
+        margin: 20px 10px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+        padding-top: 0;
+        margin-top: 0;
+        scroll-margin-top: 0;
+    }
+
+    .section-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .section-media {
+        margin-top: 0;
+    }
+
+    .section-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .logo-img {
+        max-width: 180px;
+        margin-top: 20px;
+    }
+
     .musiciens-grid {
-        grid-template-columns: 1fr; /* Repasse sur 1 colonne sur mobile */
+        grid-template-columns: 1fr;
         gap: 0;
     }
 }
 
-/* Décalage automatique pour éviter que le menu fixe ne masque les titres */
-.content-section, section {
-    scroll-margin-top: 90px; /* Décale le point d'arrêt de 90 pixels vers le bas */
-}
 
-/* Défilement doux lors du clic dans le menu */
-html {
-    scroll-behavior: smooth;
+/* =========================================================
+   9. PETITS ÉCRANS MOBILES (<= 480px)
+   ========================================================= */
+
+@media (max-width: 480px) {
+    .galerie {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 10px;
+    }
+
+    .galerie img {
+        height: 130px;
+    }
 }
