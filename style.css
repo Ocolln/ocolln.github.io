@@ -140,3 +140,27 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+/* Layout en grille pour Texte + Image côte à côte */
+.section-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* 2 tiers pour le texte, 1 tiers pour l'image */
+    gap: 25px;
+    align-items: start;
+}
+
+/* Image spécifique aux sections */
+.section-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+/* Adaptation automatique pour mobiles et tablettes */
+@media (max-width: 768px) {
+    .section-grid {
+        grid-template-columns: 1fr; /* Sur écran mobile, l'image passe sous le texte */
+    }
+}
