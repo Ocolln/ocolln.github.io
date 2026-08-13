@@ -50,9 +50,23 @@ nav ul li a:hover, nav ul li a.active {
     border-bottom: 2px solid #3498db;
 }
 
+/* 1. Décalage du contenu principal sous le bandeau noir */
+main {
+    padding-top: 80px; /* Crée un espace blanc sous le bandeau pour que les cartes ne glissent pas dessous */
+}
+
+/* 2. Réglage précis de l'ancre invisible pour PC */
+.ancre-menu {
+    display: block;
+    height: 80px;        /* Hauteur exacte correspondant au bandeau */
+    margin-top: -80px;   /* Marge négative pour compenser l'espace */
+    visibility: hidden;
+    pointer-events: none;
+}
+
 /* Espace au-dessus des images dans les sections sur PC */
 .section-media {
-    margin-top: 50px; /* Décale l'image vers le bas pour l'aligner harmonieusement sous le niveau du titre */
+    margin-top: 0; /* Remise à l'état d'origine */
 }
 
 /* S'assurer que les images restent bien cadrées */
@@ -188,10 +202,21 @@ a:hover {
 
 @media (max-width: 768px) {
 
-    /* Sur mobile, l'image est sous le texte, donc pas besoin de la descendre */
-    .section-media {
-        margin-top: 15px;
+    /* Sur mobile, on ajuste la marge en haut du contenu selon la hauteur du menu mobile */
+    main {
+        padding-top: 140px;
     }
+
+    /* Ancre invisible adaptée pour smartphone */
+    .ancre-menu {
+        height: 140px;
+        margin-top: -140px;
+    }
+
+    .section-media {
+        margin-top: 0;
+    }
+}
 
     /* Restaurez des styles propres et normaux pour h2 et section */
     h2 {
