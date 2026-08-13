@@ -286,3 +286,29 @@ img {
         height: 130px; /* Hauteur légèrement réduite sur smartphone */
     }
 }
+
+/* Style pour le logo circulaire (sans cadre, sans fond, entier) */
+.logo-img {
+    width: 100%;
+    max-width: 250px; /* Limite la taille maximale pour qu'il ne soit pas géant sur PC */
+    height: auto;     /* Conserve les proportions parfaites du cercle */
+    display: block;
+    margin: 0 auto;   /* Centre le logo dans son espace */
+    
+    /* Annule tout cadre, fond ou ombre */
+    border: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    
+    /* Assure que l'image est entière sans être découpée */
+    object-fit: contain !important;
+}
+
+/* Ajustement pour smartphone */
+@media (max-width: 768px) {
+    .logo-img {
+        max-width: 180px; /* Légèrement plus petit sur mobile pour laisser de la place au texte */
+        margin-top: 20px; /* Espace au-dessus une fois qu'il passe sous le texte */
+    }
+}
