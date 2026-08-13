@@ -164,3 +164,76 @@ a:hover {
         grid-template-columns: 1fr; /* Sur écran mobile, l'image passe sous le texte */
     }
 }
+
+/* =========================================================
+   OPTIMISATIONS POUR SMARTPHONES ET TABLETTES (Mobile)
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    /* 1. Ajustement de l'en-tête et du menu */
+    header {
+        flex-direction: column; /* Le logo passe au-dessus du menu */
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap; /* Permet aux liens du menu de passer à la ligne sur mobile */
+        justify-content: center;
+        gap: 8px 12px;
+    }
+
+    nav ul li {
+        margin-left: 0; /* Annule la marge ordinateur */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Texte du menu légèrement plus petit pour tenir facilement */
+        padding: 4px 6px;
+    }
+
+    /* 2. Ajustement de la bannière Hero */
+    .hero {
+        padding: 70px 15px; /* Moins de hauteur vide pour voir la suite tout de suite */
+    }
+
+    .hero h1 {
+        font-size: 26px; /* Titre principal adapté aux petits écrans */
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    /* 3. Marges et espaces des sections de contenu */
+    .content-section {
+        margin: 20px 10px; /* Moins d'espace vide autour des blocs */
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    /* 4. Gestion du texte et des images */
+    .section-grid {
+        grid-template-columns: 1fr; /* Une seule colonne : le texte, puis l'image en-dessous */
+        gap: 15px;
+    }
+
+    .section-img {
+        max-height: 250px; /* Limite la hauteur des images pour ne pas masquer tout l'écran */
+        object-fit: cover;
+    }
+
+    /* 5. Galerie photos */
+    .galerie {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Deux photos par ligne au lieu d'une seule grande */
+        gap: 10px;
+    }
+}
