@@ -173,7 +173,7 @@ a:hover {
 
     /* Décalage plus grand sur mobile car le bandeau noir est plus haut */
     .content-section, section {
-        scroll-margin-top: 150px; 
+        scroll-margin-top: 300px; 
     }
     
     /* 1. Ajustement de l'en-tête et du menu */
