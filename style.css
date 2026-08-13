@@ -175,6 +175,10 @@ a:hover {
     .content-section, section {
         scroll-margin-top: 300px; 
     }
+/* Grille texte/image : passe en 1 seule colonne sur mobile */
+    .section-grid {
+        grid-template-columns: 1fr;
+    }
     
     /* 1. Ajustement de l'en-tête et du menu */
     header {
