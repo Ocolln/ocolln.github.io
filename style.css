@@ -327,16 +327,18 @@ footer {
 
 @media (max-width: 768px) {
 
-   /* Sur mobile, les affiches restent côte à côte sur 2 colonnes */
+   /* Force 2 affiches côte à côte sur mobile */
     .galerie-affiches {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px;
     }
 
     .galerie-affiches img {
-        height: 200px; /* Hauteur ajustée pour écran de téléphone */
+        height: 220px !important; /* Hauteur confortable pour bien lire les affiches sur smartphone */
     }
 
+    /* ... conservez vos autres règles mobiles ... */
+   }
    
     main {
         padding-top: 140px;
