@@ -21,10 +21,11 @@ main {
 
 /* Réduction ciblée de la photo de la cheffe sur PC */
 .photo-cheffe {
-    max-width: 280px !important; /* Limite la largeur à environ 1/3 */
+    max-width: 280px !important;
     width: 100% !important;
     height: auto !important;
-    justify-self: center;        /* Centre la photo dans sa colonne */
+    display: block;
+    margin: 0 auto;
 }
 
 /* Sécurité globale des images */
@@ -120,13 +121,13 @@ nav ul li a.active {
    ========================================================= */
 
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.3)), url('images/ork.jpg') no-repeat;
-    background-position: center top; /* Cadrage calé vers le haut */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)), url('images/ork.jpg') no-repeat;
+    background-position: center center; /* Recentré pour afficher le haut ET le bas */
     background-size: cover;
     color: white;
     text-align: center;
-    padding-top: 40px;    /* Réduit au minimum pour coller le titre en haut */
-    padding-bottom: 240px; /* Espace important en bas pour laisser apparaître les musiciens */
+    padding-top: 40px;
+    padding-bottom: 200px;
     min-height: 350px;
 }
 
@@ -239,21 +240,20 @@ nav ul li a.active {
 /* Galerie d'affiches de concert sur PC */
 .galerie-affiches {
     display: grid !important;
-    /* Force exactement 3 colonnes de taille égale sur PC */
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* 3 colonnes garanties sur PC */
     gap: 20px;
     margin-top: 25px;
 }
 
 .galerie-affiches img {
     width: 100% !important;
-    height: 320px !important;    /* Hauteur fixe harmonieuse pour les affiches */
-    object-fit: contain !important; /* Affiche l'affiche entière sans la couper */
-    background-color: #f8f9fa;
-    border: 1px solid #e0e0e0;
+    max-width: 100% !important; /* Annule la limite des 280px */
+    height: 320px !important;
+    object-fit: contain !important;
+    border: none !important;            /* Supprime le cadre gris */
+    background-color: transparent !important; /* Supprime le fond gris */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .galerie-affiches img:hover {
@@ -274,7 +274,6 @@ nav ul li a.active {
     border-radius: 0 !important;
     object-fit: contain !important;
 }
-
 
 /* =========================================================
    6. SECTION LES MUSICIENS
