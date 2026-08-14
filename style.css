@@ -346,6 +346,13 @@ footer {
 
 @media (max-width: 768px) {
 
+    .photo-cheffe {
+        max-width: 100% !important; /* L'image reprend toute la largeur disponible sur téléphone */
+    }
+
+    /* ... vos autres règles mobiles ... */
+   }
+
     .cheffe-container .section-img,
     .cheffe-img {
         max-width: 100% !important; /* Reprend la largeur disponible du téléphone */
