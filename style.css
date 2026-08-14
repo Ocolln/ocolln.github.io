@@ -388,6 +388,15 @@ footer {
         gap: 10px;
     }
 
+   /* Indique que les images sont cliquables */
+.galerie img, .section-img {
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.galerie img:hover, .section-img:hover {
+    opacity: 0.9;
+}
     .galerie img {
         height: 130px;
     }
