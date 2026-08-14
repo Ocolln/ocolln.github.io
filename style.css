@@ -19,6 +19,14 @@ main {
     padding-top: 80px; /* Espace réservé sous le bandeau fixe */
 }
 
+/* Réduction ciblée de la photo de la cheffe sur PC */
+.photo-cheffe {
+    max-width: 280px !important; /* Limite la largeur à environ 1/3 */
+    width: 100% !important;
+    height: auto !important;
+    justify-self: center;        /* Centre la photo dans sa colonne */
+}
+
 /* Sécurité globale des images */
 img {
     max-width: 100%;
