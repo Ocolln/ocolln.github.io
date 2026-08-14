@@ -208,6 +208,13 @@ nav ul li a.active {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Style spécifique pour les affiches dans la galerie si vous souhaitez les voir entières */
+.galerie-affiches img {
+    height: 260px;          /* Hauteur plus grande adaptée au format portrait des affiches */
+    object-fit: contain;    /* Affiche l'affiche entière sans la couper */
+    background-color: #f0f0f0; /* Fond neutre pour combler si l'image est étroite */
+}
+
 /* Logo circulaire */
 .logo-img {
     width: 100%;
