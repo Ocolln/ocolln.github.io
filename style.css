@@ -148,7 +148,9 @@ nav ul li a.active {
 /* =========================================================
    4. LAYOUT DES SECTIONS (TEXTE + IMAGE)
    ========================================================= */
-
+.content-section p {
+    text-align: justify;
+}
 .cheffe-container .section-img,
 .cheffe-img {
     max-width: 320px !important;
