@@ -140,6 +140,17 @@ nav ul li a.active {
    4. LAYOUT DES SECTIONS (TEXTE + IMAGE)
    ========================================================= */
 
+/* Limite la largeur de la photo de la cheffe sur PC à ~1/3 de la section */
+.cheffe-container .section-img,
+.cheffe-img {
+    max-width: 320px !important; /* Fixe la largeur max à environ un tiers du cadre */
+    height: auto !important;
+    display: block;
+    margin: 0 auto;             /* Centre l'image si elle est seule */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
 .section-grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -326,6 +337,11 @@ footer {
    ========================================================= */
 
 @media (max-width: 768px) {
+
+    .cheffe-container .section-img,
+    .cheffe-img {
+        max-width: 100% !important; /* Reprend la largeur disponible du téléphone */
+    }
 
    /* Force 2 affiches côte à côte sur mobile */
     .galerie-affiches {
