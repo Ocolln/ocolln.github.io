@@ -217,20 +217,29 @@ nav ul li a.active {
     margin-top: 20px;
 }
 
+/* Galerie d'affiches de concert sur PC */
+.galerie-affiches {
+    display: grid !important;
+    /* Force exactement 3 colonnes de taille égale sur PC */
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px;
+    margin-top: 25px;
+}
+
 .galerie-affiches img {
-    width: 100%;
-    height: 320px;            /* Hauteur confortable pour le format portrait d'une affiche */
-    object-fit: contain;      /* Affiche l'affiche entière sans la rogner */
-    background-color: #f8f9fa; /* Petit fond gris neutre et élégant autour de l'affiche */
+    width: 100% !important;
+    height: 320px !important;    /* Hauteur fixe harmonieuse pour les affiches */
+    object-fit: contain !important; /* Affiche l'affiche entière sans la couper */
+    background-color: #f8f9fa;
     border: 1px solid #e0e0e0;
-    border-radius: 6px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .galerie-affiches img:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 /* Logo circulaire */
