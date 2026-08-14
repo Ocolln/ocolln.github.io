@@ -244,6 +244,59 @@
     <footer>
         <p>&copy; 2026 OCOLLN - Tous droits réservés.</p>
     </footer>
+<!-- Script pour l'agrandissement des images au clic -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Création dynamique de la boîte modale (fond sombre)
+    const overlay = document.createElement('div');
+    overlay.id = 'image-lightbox';
+    overlay.style.cssText = `
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.85);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        cursor: pointer;
+        padding: 20px;
+        box-sizing: border-box;
+    `;
 
+    // 2. Création de l'image agrandie
+    const zoomedImg = document.createElement('img');
+    zoomedImg.style.cssText = `
+        max-width: 90vw;
+        max-height: 90vh;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        transition: transform 0.2s ease;
+    `;
+
+    overlay.appendChild(zoomedImg);
+    document.body.appendChild(overlay);
+
+    // 3. Sélection de toutes les images cliquables (galerie + photos de section)
+    const images = document.querySelectorAll('.galerie img, .section-img');
+
+    images.forEach(img => {
+        img.style.cursor = 'pointer'; // Curseur loupe/main sur la photo
+        img.addEventListener('click', function() {
+            zoomedImg.src = this.src;
+            zoomedImg.alt = this.alt;
+            overlay.style.display = 'flex';
+        });
+    });
+
+    // 4. Re-cliquer n'importe où sur l'écran pour fermer l'image
+    overlay.addEventListener('click', function() {
+        overlay.style.display = 'none';
+    });
+});
+</script>
 </body>
 </html>
