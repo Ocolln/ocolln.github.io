@@ -84,6 +84,17 @@ header {
     top: 0;
     z-index: 1000;
 }
+/* Style du logo image dans le bandeau noir */
+.logo-header img {
+    height: 45px;          /* Hauteur idéale pour le bandeau */
+    width: auto;           /* Conserve les proportions du logo */
+    display: block;
+    transition: opacity 0.2s ease;
+}
+
+.logo-header img:hover {
+    opacity: 0.85;
+}
 
 header .logo {
     font-size: 24px;
@@ -340,6 +351,12 @@ footer {
         padding-top: 140px;
     }
 
+
+       .logo-header img {
+        height: 35px;      /* Légèrement plus petit sur mobile */
+        margin-bottom: 10px;
+       }
+   
     .ancre-menu {
         height: 140px;
         margin-top: -140px;
