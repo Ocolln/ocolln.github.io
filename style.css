@@ -78,7 +78,7 @@ header {
     color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 10px 50px; /* Passage de 20px à 10px en haut/bas pour gagner de la place */
     position: sticky;
     top: 0;
