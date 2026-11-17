@@ -137,7 +137,7 @@ nav ul li a.active {
     width: 100%;
     overflow: hidden;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     text-align: center;
     color: white;
